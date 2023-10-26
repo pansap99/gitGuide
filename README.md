@@ -1,6 +1,18 @@
 # Git coarse
 
-# Contents
+# Table of Contents
+
+1. [What is git ?](#what-is-git)
+2. [Git vs Gihub](#git-vs-github)
+3. [Git installation](#git-installation)
+   - [Windows](#windows-installation)
+   - [Linux](#mac-installation)
+   - [Mac](#mac-installation)
+4. [Configuring git](#configuring-git)
+    - [git credentials](#configuring-git)
+    - [git & vsode setup](#configure-git-to-use-vscode-as-the-default-editor)
+5. [GitKraken](#gitkraken)
+
 
 - Intro to git
 - Merging
