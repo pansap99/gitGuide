@@ -2,37 +2,97 @@
 
 # Table of Contents
 
-1. [What is git ?](#what-is-git)
-2. [Git vs Gihub](#git-vs-github)
-3. [Git installation](#git-installation)
-   - [Windows](#windows-installation)
-   - [Linux](#mac-installation)
-   - [Mac](#mac-installation)
-4. [Configuring git](#configuring-git)
-    - [git credentials](#configuring-git)
-    - [git & vsode setup](#configure-git-to-use-vscode-as-the-default-editor)
-5. [GitKraken](#gitkraken)
-
-
-- Intro to git
-- Merging
-- Fetching & Pulling
-- Git Tags
-- Installation
-- Diffing
-- Github Odds & Ends
-- Git Behind The Scenes
-- Git Basics
-- Stashing
-- Collaborative Workflows
-- Reflogs
-- Commiting in Detail
-- Undoing changes
-- Rebasing
-- Custom Aliases
-- Branching
-- Github Intro
-- Interactive rebashing
+- [Git coarse](#git-coarse)
+- [Table of Contents](#table-of-contents)
+  - [Core toolbox](#core-toolbox)
+  - [Not so often but happen](#not-so-often-but-happen)
+  - [Specific to collaboration](#specific-to-collaboration)
+  - [Other git stuff - Advanced](#other-git-stuff---advanced)
+- [What is git ??](#what-is-git-)
+- [Git vs Github](#git-vs-github)
+- [Git installation](#git-installation)
+  - [Windows installation](#windows-installation)
+  - [Mac Installation](#mac-installation)
+  - [Linux Installation](#linux-installation)
+  - [Configuring GIT](#configuring-git)
+- [Configure git to use VSCode as the default editor](#configure-git-to-use-vscode-as-the-default-editor)
+- [GitKraken](#gitkraken)
+  - [Installation](#installation)
+  - [Linux](#linux)
+- [Git repository ("repo" for short)](#git-repository-repo-for-short)
+- [git status (command)](#git-status-command)
+- [git init (command) Initialize a repository in a folder](#git-init-command-initialize-a-repository-in-a-folder)
+  - [What actually happens when we use git init?](#what-actually-happens-when-we-use-git-init)
+- [Commit](#commit)
+  - [What is a commit ?](#what-is-a-commit-)
+- [git add (command)](#git-add-command)
+- [git commit (command)](#git-commit-command)
+- [git log (command)](#git-log-command)
+- [Commiting with a GUI (GitKraken)](#commiting-with-a-gui-gitkraken)
+- [Modify the last commit (you forgot, something or you want to change the description)](#modify-the-last-commit-you-forgot-something-or-you-want-to-change-the-description)
+- [Ignoring files](#ignoring-files)
+- [Branches](#branches)
+  - [Master branch](#master-branch)
+  - [HEAD -\> master](#head---master)
+  - [Viewing branches](#viewing-branches)
+  - [Creating and switching between branches](#creating-and-switching-between-branches)
+  - [git checkout (command - another way of switching)](#git-checkout-command---another-way-of-switching)
+  - [Create and switch with one command](#create-and-switch-with-one-command)
+  - [What happend when you switch branch when you have unstaged changes?](#what-happend-when-you-switch-branch-when-you-have-unstaged-changes)
+  - [What happens when we switch branch when we have untracked files? (new files that git dont track)](#what-happens-when-we-switch-branch-when-we-have-untracked-files-new-files-that-git-dont-track)
+  - [Delete branch](#delete-branch)
+  - [Rename a branch](#rename-a-branch)
+- [Branhes, HEAD - git behind the scenes](#branhes-head---git-behind-the-scenes)
+- [Merging Branches (:grimacing:)](#merging-branches-grimacing)
+- [Visualize Merges](#visualize-merges)
+- [Generate Merge Commits](#generate-merge-commits)
+- [Merge branches with confilicts](#merge-branches-with-confilicts)
+- [Resolving Merge Conflicts](#resolving-merge-conflicts)
+- [git diff (command) - Comparing changes](#git-diff-command---comparing-changes)
+  - [Interprete the output of the git diff](#interprete-the-output-of-the-git-diff)
+  - [View unstaged changes, changes in the working directory etc](#view-unstaged-changes-changes-in-the-working-directory-etc)
+  - [View staged changes](#view-staged-changes)
+  - [Compare specific Files](#compare-specific-files)
+  - [Comprare changes between branches](#comprare-changes-between-branches)
+  - [Compare changes between commits](#compare-changes-between-commits)
+  - [Diffs with GUI](#diffs-with-gui)
+- [Stashing](#stashing)
+  - [Stash apply](#stash-apply)
+  - [Stashing multiple items ???](#stashing-multiple-items-)
+  - [How we can drop and clean the stash](#how-we-can-drop-and-clean-the-stash)
+- [Undoing changes and "time-travel"](#undoing-changes-and-time-travel)
+  - [Checkout old commits](#checkout-old-commits)
+  - [Reataching the HEAD](#reataching-the-head)
+  - [Checkout commits of the current branch relative to HEAD](#checkout-commits-of-the-current-branch-relative-to-head)
+  - [Discarding changes with ```git checkout```](#discarding-changes-with-git-checkout)
+  - [Undoing changes](#undoing-changes)
+  - [Unstaging Changes with ```git restore```](#unstaging-changes-with-git-restore)
+  - [Undoing commits with ```git reset```](#undoing-commits-with-git-reset)
+  - [Undo commits with ```git revert```](#undo-commits-with-git-revert)
+  - [When to use ```git reset``` and when ```git revert``` (important)](#when-to-use-git-reset-and-when-git-revert-important)
+- [Github](#github)
+- [Cloning Github repositories](#cloning-github-repositories)
+- [Github SSH config](#github-ssh-config)
+  - [From git to Github](#from-git-to-github)
+  - [Walk around the github page](#walk-around-the-github-page)
+  - [git push in more detail](#git-push-in-more-detail)
+  - [The -u option with git push](#the--u-option-with-git-push)
+- [Github fetching and pulling](#github-fetching-and-pulling)
+  - [Remote branches but no local branches](#remote-branches-but-no-local-branches)
+- [Git Fetch](#git-fetch)
+- [Git Pull](#git-pull)
+- [Public vs Private repositories](#public-vs-private-repositories)
+- [Adding collaborators to a repo](#adding-collaborators-to-a-repo)
+- [README.md file ??](#readmemd-file-)
+- [Markdown](#markdown)
+- [Collaboration workflows](#collaboration-workflows)
+  - [The holly Master/Main branch](#the-holly-mastermain-branch)
+  - [Feature branches](#feature-branches)
+    - [Feature branch naming](#feature-branch-naming)
+    - [Merging In Feature Branches](#merging-in-feature-branches)
+  - [Pull requestss (PR)](#pull-requestss-pr)
+  - [Configuring protection rules](#configuring-protection-rules)
+  - [Fork\&Clone workflow](#forkclone-workflow)
 
 ## Core toolbox
 
