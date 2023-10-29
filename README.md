@@ -88,35 +88,6 @@
   - [Configuring protection rules](#configuring-protection-rules)
   - [Fork\&Clone workflow](#forkclone-workflow)
 
-## Core toolbox
-
-- Intro to Git
-- Merging
-- Installation
-- Git Basics
-- Commiting in Detail
-- Branching
-
-## Not so often but happen
-
-- Diffing
-- Stashing
-- Undoig Changes
-
-## Specific to collaboration
-
-- Fetching & pulling
-- Githuv Odds & Ends
-- Collaborative Workflows (many ways not just one to colaborate)
-
-## Other git stuff - Advanced
-
-- Git Tags
-- Git behind the scenes
-- Reflogs
-- Custom aliases
-- Rebashing
-- Interactive rebashing
 
 # What is git ??
 
