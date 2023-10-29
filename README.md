@@ -1,8 +1,8 @@
-# Git coarse
+# Git course
 
 # Table of Contents
 
-- [Git coarse](#git-coarse)
+- [Git course](#git-coarse)
 - [Table of Contents](#table-of-contents)
   - [Core toolbox](#core-toolbox)
   - [Not so often but happen](#not-so-often-but-happen)
