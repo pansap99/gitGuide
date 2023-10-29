@@ -1,5 +1,6 @@
 ## Contact Details:
 email: pansap99@gmail.com
+
 LinkedIn: [Panagiotis Sapoutzoglou](https://www.linkedin.com/in/panagiotis-sapoutzoglou-66984a201/)
 
 # Table of Contents
