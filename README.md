@@ -116,11 +116,21 @@ We can interact with git using two ways:
 Git was originally created as a command line interface tool. GUI exists to make the life easier for people with little-to-no command line experience.
 
 ## Windows installation
-TODO
+
+1. Navigate to https://git-scm.com/download/win
+2. Choose the installer that fits your system, and download it.
+3. Follow the prompts
+4. Run ```git --version``` to verify the installation
 ## Mac Installation
 TODO
 ## Linux Installation
-TODO
+
+Run:
+
+```
+sudo apt update
+sudo apt install git
+```
 ## Configuring GIT
 
 Set our username and email.
