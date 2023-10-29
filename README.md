@@ -122,7 +122,20 @@ Git was originally created as a command line interface tool. GUI exists to make 
 3. Follow the prompts
 4. Run ```git --version``` to verify the installation
 ## Mac Installation
-TODO
+
+1. Install Homebrew
+    ```bash
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+2. Run 
+    ```
+    brew install git
+    ```
+3. Verify the installation
+
+    ```
+    git --version
+    ```
 ## Linux Installation
 
 Run:
