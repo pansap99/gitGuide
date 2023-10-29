@@ -2,12 +2,6 @@
 
 # Table of Contents
 
-- [Git course](#git-coarse)
-- [Table of Contents](#table-of-contents)
-  - [Core toolbox](#core-toolbox)
-  - [Not so often but happen](#not-so-often-but-happen)
-  - [Specific to collaboration](#specific-to-collaboration)
-  - [Other git stuff - Advanced](#other-git-stuff---advanced)
 - [What is git ??](#what-is-git-)
 - [Git vs Github](#git-vs-github)
 - [Git installation](#git-installation)
